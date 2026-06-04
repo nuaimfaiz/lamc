@@ -1,0 +1,159 @@
+/* -------------------- LUMENOVA THEME -------------------- */
+:root {
+  --navy-dark: #002D62;
+  --navy-medium: #0B3C5D;
+  --teal-deep: #007399;
+  --cerulean: #1D8A99;
+  --cyan-bright: #00B4D8;
+  --aqua-glow: #48CAE4;
+  --glow-shadow: 0 0 12px rgba(0, 180, 216, 0.6);
+}
+
+body {
+  color: var(--navy-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, .nav-link {
+  color: var(--navy-dark);
+}
+.text-navy {
+  color: var(--navy-dark);
+}
+.bg-navy {
+  background-color: var(--navy-dark);
+}
+.bg-teal-cerulean {
+  background: linear-gradient(135deg, var(--teal-deep), var(--cerulean));
+}
+.btn-cyan {
+  background: linear-gradient(95deg, var(--cyan-bright), var(--aqua-glow));
+  color: var(--navy-dark);
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 180, 216, 0.3);
+}
+.btn-cyan:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 180, 216, 0.5);
+}
+.border-cyan {
+  border-color: var(--cyan-bright);
+}
+.glow-text {
+  text-shadow: 0 0 6px var(--aqua-glow);
+}
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -12px rgba(0, 45, 98, 0.2), 0 0 0 2px var(--cyan-bright);
+}
+
+/* ---------- CROSS LOGO WITH LAYERED SHADOW & STAR BURSTS ---------- */
+.logo-cross {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+}
+.cross-symbol {
+  position: relative;
+  width: 42px;
+  height: 42px;
+}
+.cross-vertical {
+  position: absolute;
+  width: 12px;
+  height: 42px;
+  background: linear-gradient(135deg, var(--teal-deep), var(--cerulean));
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 45, 98, 0.3);
+}
+.cross-horizontal {
+  position: absolute;
+  width: 42px;
+  height: 12px;
+  background: linear-gradient(135deg, var(--teal-deep), var(--cerulean));
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 45, 98, 0.3);
+}
+.cross-shadow {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: radial-gradient(circle, rgba(0,45,98,0.2) 0%, rgba(0,45,98,0) 80%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.star-burst {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--cyan-bright);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--aqua-glow);
+  animation: pulseGlow 1.8s infinite alternate;
+}
+.star-burst:nth-child(1) { top: -8px; left: 20px; width: 6px; height: 6px; animation-delay: 0s; }
+.star-burst:nth-child(2) { bottom: -6px; right: 12px; width: 10px; height: 10px; animation-delay: 0.4s; }
+.star-burst:nth-child(3) { top: 12px; right: -10px; width: 5px; height: 5px; animation-delay: 0.8s; }
+.star-burst:nth-child(4) { bottom: 18px; left: -6px; width: 7px; height: 7px; animation-delay: 1.2s; }
+.star-burst::after {
+  content: "✨";
+  position: absolute;
+  font-size: 10px;
+  top: -8px;
+  left: -2px;
+  opacity: 0.7;
+}
+
+@keyframes pulseGlow {
+  0% { opacity: 0.4; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Glowing swoosh effect for hero */
+.glow-swoosh {
+  position: relative;
+  overflow: hidden;
+}
+.glow-swoosh::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(0,180,216,0.15) 0%, rgba(72,202,228,0) 70%);
+  pointer-events: none;
+  animation: swooshMove 8s infinite alternate;
+}
+@keyframes swooshMove {
+  0% { transform: translate(-5%, -5%) rotate(0deg); }
+  100% { transform: translate(5%, 5%) rotate(3deg); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #e2e8f0; }
+::-webkit-scrollbar-thumb { background: var(--cyan-bright); border-radius: 8px; }
+
+/* Links & interactive */
+a, .hover-cyan {
+  transition: color 0.2s;
+}
+a:hover, .hover-cyan:hover {
+  color: var(--cyan-bright);
+}
