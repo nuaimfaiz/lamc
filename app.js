@@ -11,21 +11,71 @@ const specialtiesByCategory = {
 };
 
 const doctorsData = [
-  { id: "d1", name: "Dr. Sarah Chen", title: "Chief of Internal Medicine", specialty: "Internal Medicine", category: "Internal Medicine & Sub-Specialties", bio: "Expert in complex medical diagnosis with 18 years experience.", img: "👩‍⚕️", qualifications: "MD, FACP" },
-  { id: "d2", name: "Dr. Michael Torres", title: "Interventional Cardiologist", specialty: "Cardiology", category: "Internal Medicine & Sub-Specialties", bio: "Pioneer in minimally invasive cardiac procedures.", img: "❤️", qualifications: "MD, FACC" },
-  { id: "d3", name: "Dr. Anita Verma", title: "Lead Surgical Oncologist", specialty: "Surgical Oncology", category: "Surgical Specialties", bio: "Specialized in robotic cancer surgeries.", img: "🔪", qualifications: "MS, MCh" },
-  { id: "d4", name: "Dr. James Okonkwo", title: "Neurosurgeon", specialty: "Neurosurgery", category: "Surgical Specialties", bio: "Advanced brain & spine interventions.", img: "🧠", qualifications: "MD, PhD Neurosurgery" },
-  { id: "d5", name: "Dr. Emma Laurent", title: "Neonatology Director", specialty: "Neonatology", category: "Pediatrics & Neonatal Specialties", bio: "Level IV NICU specialist, prematurity expert.", img: "👶", qualifications: "MD, FAAP" },
-  { id: "d6", name: "Dr. Rebecca Foster", title: "Maternal-Fetal Medicine", specialty: "Maternal-Fetal Medicine", category: "Women’s Health", bio: "High-risk pregnancy management.", img: "🤰", qualifications: "MD, MFM" },
-  { id: "d7", name: "Dr. Alan Grant", title: "Consultant Psychiatrist", specialty: "Psychiatry", category: "Neurology & Psychiatry", bio: "Cognitive behavioral & integrative mental health.", img: "🧠", qualifications: "MD, DPM" },
-  { id: "d8", name: "Dr. Laura Mendez", title: "Interventional Radiologist", specialty: "Interventional Radiology", category: "Diagnostic & Interventional Services", bio: "Image-guided tumor ablation and embolization.", img: "🩻", qualifications: "MD, FSIR" },
-  { id: "d9", name: "Dr. Henry Wu", title: "Chief of Emergency Medicine", specialty: "Emergency Medicine", category: "Emergency, Critical Care, & Anesthesia", bio: "Trauma team leader, disaster medicine.", img: "🚑", qualifications: "MD, FACEP" },
-  { id: "d10", name: "Dr. Sophia Ricci", title: "Dermatology & Laser Surgery", specialty: "Dermatology", category: "Rehabilitation & Specialized Therapies", bio: "Medical & cosmetic dermatology.", img: "🧴", qualifications: "MD, FAAD" },
-  { id: "d11", name: "Dr. Oliver Chen", title: "Pediatric Cardiologist", specialty: "Pediatric Cardiology", category: "Pediatrics & Neonatal Specialties", bio: "Congenital heart diseases expert.", img: "❤️", qualifications: "MD, FACC" },
-  { id: "d12", name: "Dr. Nina Kapoor", title: "Gynecologic Oncologist", specialty: "Gynecologic Oncology", category: "Women’s Health", bio: "Minimally invasive cancer surgeries.", img: "🩺", qualifications: "MD, FACOG" },
-  { id: "d13", name: "Dr. Viktor Petrov", title: "Orthopedic Surgeon", specialty: "Orthopedic Surgery", category: "Surgical Specialties", bio: "Joint replacements & sports medicine.", img: "🦴", qualifications: "MS Ortho" },
-  { id: "d14", name: "Dr. Fatima Al-Hassan", title: "Nephrology & Transplant", specialty: "Nephrology", category: "Internal Medicine & Sub-Specialties", bio: "Kidney transplant program lead.", img: "🧫", qualifications: "MD, FASN" },
-  { id: "d15", name: "Dr. Lucas Grey", title: "Pulmonologist", specialty: "Pulmonology", category: "Internal Medicine & Sub-Specialties", bio: "Interventional pulmonology, asthma.", img: "🌬️", qualifications: "MD, FCCP" }
+  // Internal Medicine & Sub-Specialties
+  { id: "d1", name: "Dr. Sarah Chen", title: "Chief of Internal Medicine", specialty: "Internal Medicine", category: "Internal Medicine & Sub-Specialties", bio: "Expert in complex diagnosis.", img: "👩‍⚕️", qualifications: "MD, FACP" },
+  { id: "d2", name: "Dr. Michael Torres", title: "Interventional Cardiologist", specialty: "Cardiology", category: "Internal Medicine & Sub-Specialties", bio: "Minimally invasive cardiac procedures.", img: "❤️", qualifications: "MD, FACC" },
+  { id: "d3", name: "Dr. Emily Clark", title: "Endocrinologist", specialty: "Endocrinology", category: "Internal Medicine & Sub-Specialties", bio: "Diabetes & metabolic disorders.", img: "🩺", qualifications: "MD, FACE" },
+  { id: "d4", name: "Dr. David Kim", title: "Gastroenterologist", specialty: "Gastroenterology", category: "Internal Medicine & Sub-Specialties", bio: "Advanced endoscopy & liver diseases.", img: "🔬", qualifications: "MD, FACG" },
+  { id: "d5", name: "Dr. Rachel Adams", title: "Hematologist", specialty: "Hematology", category: "Internal Medicine & Sub-Specialties", bio: "Blood disorders & bone marrow transplant.", img: "🩸", qualifications: "MD, FRCPC" },
+  { id: "d6", name: "Dr. James Carter", title: "Infectious Disease Specialist", specialty: "Infectious Diseases", category: "Internal Medicine & Sub-Specialties", bio: "Tropical & hospital infections.", img: "🦠", qualifications: "MD, FIDSA" },
+  { id: "d7", name: "Dr. Helen Zhang", title: "Medical Geneticist", specialty: "Medical Genetics", category: "Internal Medicine & Sub-Specialties", bio: "Genomic medicine & rare diseases.", img: "🧬", qualifications: "MD, PhD" },
+  { id: "d8", name: "Dr. Fatima Al-Hassan", title: "Nephrologist", specialty: "Nephrology", category: "Internal Medicine & Sub-Specialties", bio: "Kidney transplant lead.", img: "🧫", qualifications: "MD, FASN" },
+  { id: "d9", name: "Dr. Anita Verma", title: "Medical Oncologist", specialty: "Medical Oncology", category: "Internal Medicine & Sub-Specialties", bio: "Chemotherapy & targeted therapies.", img: "🔪", qualifications: "MD, DM" },
+  { id: "d10", name: "Dr. Lucas Grey", title: "Pulmonologist", specialty: "Pulmonology", category: "Internal Medicine & Sub-Specialties", bio: "Interventional pulmonology.", img: "🌬️", qualifications: "MD, FCCP" },
+  { id: "d11", name: "Dr. Maria Lopez", title: "Rheumatologist", specialty: "Rheumatology", category: "Internal Medicine & Sub-Specialties", bio: "Autoimmune & arthritis care.", img: "🦴", qualifications: "MD, FACR" },
+  // Surgical Specialties
+  { id: "d12", name: "Dr. Robert Hayes", title: "General Surgeon", specialty: "General Surgery", category: "Surgical Specialties", bio: "Minimally invasive & acute care.", img: "🔪", qualifications: "MD, FACS" },
+  { id: "d13", name: "Dr. Victor Chen", title: "Cardiothoracic Surgeon", specialty: "Cardiothoracic Surgery", category: "Surgical Specialties", bio: "Heart & lung transplant.", img: "❤️", qualifications: "MD, FACS" },
+  { id: "d14", name: "Dr. Isabella Rossi", title: "Colorectal Surgeon", specialty: "Colorectal Surgery", category: "Surgical Specialties", bio: "Laparoscopic bowel surgery.", img: "🩺", qualifications: "MD, FRCS" },
+  { id: "d15", name: "Dr. James Okonkwo", title: "Neurosurgeon", specialty: "Neurosurgery", category: "Surgical Specialties", bio: "Brain & spine tumors.", img: "🧠", qualifications: "MD, PhD" },
+  { id: "d16", name: "Dr. Olivia Wong", title: "Ophthalmologist", specialty: "Ophthalmology", category: "Surgical Specialties", bio: "Cataract & LASIK surgery.", img: "👁️", qualifications: "MD, FACS" },
+  { id: "d17", name: "Dr. Samuel Lee", title: "Oral Surgeon", specialty: "Oral Surgery", category: "Surgical Specialties", bio: "Maxillofacial reconstruction.", img: "🦷", qualifications: "DDS, MD" },
+  { id: "d18", name: "Dr. Viktor Petrov", title: "Orthopedic Surgeon", specialty: "Orthopedic Surgery", category: "Surgical Specialties", bio: "Joint replacements & sports injuries.", img: "🦴", qualifications: "MS Ortho" },
+  { id: "d19", name: "Dr. Nora Schmidt", title: "ENT Surgeon", specialty: "ENT", category: "Surgical Specialties", bio: "Sinus & hearing restoration.", img: "👂", qualifications: "MD, FACS" },
+  { id: "d20", name: "Dr. Peter White", title: "Pediatric Surgeon", specialty: "Pediatric Surgery", category: "Surgical Specialties", bio: "Neonatal & pediatric operations.", img: "👶", qualifications: "MD, FACS" },
+  { id: "d21", name: "Dr. Sophia Ricci", title: "Plastic Surgeon", specialty: "Plastic Surgery", category: "Surgical Specialties", bio: "Reconstructive & cosmetic.", img: "✨", qualifications: "MD, FACS" },
+  { id: "d22", name: "Dr. Nina Kapoor", title: "Surgical Oncologist", specialty: "Surgical Oncology", category: "Surgical Specialties", bio: "Cancer tumor removal.", img: "🩺", qualifications: "MD, FACS" },
+  { id: "d23", name: "Dr. Thomas Brown", title: "Urologist", specialty: "Urology", category: "Surgical Specialties", bio: "Robotic prostate surgery.", img: "🚽", qualifications: "MD, FACS" },
+  { id: "d24", name: "Dr. Carlos Mendez", title: "Vascular Surgeon", specialty: "Vascular Surgery", category: "Surgical Specialties", bio: "Aneurysm & bypass.", img: "🩸", qualifications: "MD, FACS" },
+  // Pediatrics & Neonatal
+  { id: "d25", name: "Dr. Emma Laurent", title: "Pediatrician", specialty: "Pediatrics", category: "Pediatrics & Neonatal", bio: "General child health.", img: "👶", qualifications: "MD, FAAP" },
+  { id: "d26", name: "Dr. Liam O'Connor", title: "Neonatologist", specialty: "Neonatology", category: "Pediatrics & Neonatal", bio: "Level IV NICU specialist.", img: "🍼", qualifications: "MD, FAAP" },
+  { id: "d27", name: "Dr. Oliver Chen", title: "Pediatric Cardiologist", specialty: "Pediatric Cardiology", category: "Pediatrics & Neonatal", bio: "Congenital heart defects.", img: "❤️", qualifications: "MD, FACC" },
+  { id: "d28", name: "Dr. Mia Johnson", title: "Pediatric Endocrinologist", specialty: "Pediatric Endocrinology", category: "Pediatrics & Neonatal", bio: "Growth & diabetes in children.", img: "📈", qualifications: "MD" },
+  { id: "d29", name: "Dr. Ethan Brooks", title: "Pediatric Gastroenterologist", specialty: "Pediatric Gastroenterology", category: "Pediatrics & Neonatal", bio: "IBD & feeding issues.", img: "🍽️", qualifications: "MD" },
+  { id: "d30", name: "Dr. Lily Adams", title: "Pediatric Hematologist-Oncologist", specialty: "Pediatric Hematology-Oncology", category: "Pediatrics & Neonatal", bio: "Childhood cancer & blood disorders.", img: "🩸", qualifications: "MD" },
+  { id: "d31", name: "Dr. Noah Kim", title: "Pediatric Infectious Disease", specialty: "Pediatric Infectious Diseases", category: "Pediatrics & Neonatal", bio: "Pediatric ID & immunology.", img: "🦠", qualifications: "MD" },
+  { id: "d32", name: "Dr. Ava Martinez", title: "Pediatric Nephrologist", specialty: "Pediatric Nephrology", category: "Pediatrics & Neonatal", bio: "Kidney diseases in children.", img: "🧫", qualifications: "MD" },
+  { id: "d33", name: "Dr. William Zhao", title: "Pediatric Pulmonologist", specialty: "Pediatric Pulmonology", category: "Pediatrics & Neonatal", bio: "Asthma & cystic fibrosis.", img: "🌬️", qualifications: "MD" },
+  { id: "d34", name: "Dr. Sophia Turner", title: "Pediatric Rheumatologist", specialty: "Pediatric Rheumatology", category: "Pediatrics & Neonatal", bio: "Juvenile arthritis.", img: "🦴", qualifications: "MD" },
+  // Women’s Health
+  { id: "d35", name: "Dr. Rebecca Foster", title: "OB-GYN", specialty: "OB-GYN", category: "Women’s Health", bio: "Comprehensive women's care.", img: "🤰", qualifications: "MD, FACOG" },
+  { id: "d36", name: "Dr. Laura Mitchell", title: "Maternal-Fetal Medicine", specialty: "Maternal-Fetal Medicine", category: "Women’s Health", bio: "High-risk pregnancy.", img: "👶", qualifications: "MD, MFM" },
+  { id: "d37", name: "Dr. Priya Sharma", title: "Gynecologic Oncologist", specialty: "Gynecologic Oncology", category: "Women’s Health", bio: "Ovarian & uterine cancers.", img: "🎗️", qualifications: "MD, FACOG" },
+  { id: "d38", name: "Dr. Jessica Wu", title: "Reproductive Endocrinology", specialty: "Reproductive Endocrinology", category: "Women’s Health", bio: "Fertility & IVF.", img: "🍼", qualifications: "MD, REI" },
+  // Neurology & Psychiatry
+  { id: "d39", name: "Dr. Alan Grant", title: "Neurologist", specialty: "Neurology", category: "Neurology & Psychiatry", bio: "Stroke & epilepsy.", img: "🧠", qualifications: "MD, FAAN" },
+  { id: "d40", name: "Dr. Karen Lewis", title: "Child Neurologist", specialty: "Child Neurology", category: "Neurology & Psychiatry", bio: "Pediatric seizures & development.", img: "👧", qualifications: "MD" },
+  { id: "d41", name: "Dr. Steven Carter", title: "Psychiatrist", specialty: "Psychiatry", category: "Neurology & Psychiatry", bio: "Adult mental health.", img: "🧠", qualifications: "MD, FAPA" },
+  { id: "d42", name: "Dr. Emily Foster", title: "Child Psychiatrist", specialty: "Child Psychiatry", category: "Neurology & Psychiatry", bio: "Adolescent & child therapy.", img: "👦", qualifications: "MD" },
+  { id: "d43", name: "Dr. George Hamilton", title: "Geriatric Psychiatrist", specialty: "Geriatric Psychiatry", category: "Neurology & Psychiatry", bio: "Dementia & late-life mood disorders.", img: "👴", qualifications: "MD" },
+  // Diagnostic & Interventional
+  { id: "d44", name: "Dr. Laura Mendez", title: "Diagnostic Radiologist", specialty: "Diagnostic Radiology", category: "Diagnostic & Interventional", bio: "MRI, CT, ultrasound.", img: "🩻", qualifications: "MD, FSIR" },
+  { id: "d45", name: "Dr. Henry Wu", title: "Interventional Radiologist", specialty: "Interventional Radiology", category: "Diagnostic & Interventional", bio: "Image-guided procedures.", img: "📡", qualifications: "MD, FSIR" },
+  { id: "d46", name: "Dr. Maria Santos", title: "Nuclear Medicine", specialty: "Nuclear Medicine", category: "Diagnostic & Interventional", bio: "PET/CT & theranostics.", img: "☢️", qualifications: "MD, ABNM" },
+  { id: "d47", name: "Dr. John Miller", title: "Pathologist", specialty: "Pathology", category: "Diagnostic & Interventional", bio: "Anatomic & clinical pathology.", img: "🔬", qualifications: "MD, FCAP" },
+  // Emergency & Critical Care
+  { id: "d48", name: "Dr. Henry Wu (Emergency)", title: "Chief of Emergency Medicine", specialty: "Emergency Medicine", category: "Emergency & Critical Care", bio: "Trauma & disaster medicine.", img: "🚑", qualifications: "MD, FACEP" },
+  { id: "d49", name: "Dr. Clara Benson", title: "Intensivist", specialty: "Critical Care", category: "Emergency & Critical Care", bio: "Medical & surgical ICU.", img: "🫀", qualifications: "MD, FCCM" },
+  { id: "d50", name: "Dr. Mark Taylor", title: "Anesthesiologist", specialty: "Anesthesiology", category: "Emergency & Critical Care", bio: "Perioperative & pain management.", img: "💉", qualifications: "MD, FASA" },
+  { id: "d51", name: "Dr. Rachel Green", title: "Pain Medicine Specialist", specialty: "Pain Medicine", category: "Emergency & Critical Care", bio: "Interventional pain & palliative.", img: "🩹", qualifications: "MD" },
+  // Rehabilitation & Therapies
+  { id: "d52", name: "Dr. Andrew Scott", title: "Physiatrist", specialty: "Physical Medicine & Rehab", category: "Rehabilitation & Therapies", bio: "Neurorehabilitation & sports injuries.", img: "🏃", qualifications: "MD, FAAPMR" },
+  { id: "d53", name: "Dr. Sophia Ricci (Derm)", title: "Dermatologist", specialty: "Dermatology", category: "Rehabilitation & Therapies", bio: "Medical & surgical dermatology.", img: "🧴", qualifications: "MD, FAAD" },
+  { id: "d54", name: "Dr. Laura Chen", title: "Allergist/Immunologist", specialty: "Allergy & Immunology", category: "Rehabilitation & Therapies", bio: "Asthma & food allergies.", img: "🌸", qualifications: "MD, FAAAAI" },
+  { id: "d55", name: "Dr. William Hart", title: "Geriatrician", specialty: "Geriatric Medicine", category: "Rehabilitation & Therapies", bio: "Comprehensive care for elderly.", img: "👴", qualifications: "MD, AGSF" },
+  { id: "d56", name: "Dr. Helen Parker", title: "Palliative Medicine", specialty: "Palliative Medicine", category: "Rehabilitation & Therapies", bio: "Symptom management & end-of-life care.", img: "🌿", qualifications: "MD, FAAHPM" },
+  { id: "d57", name: "Dr. Kevin Ross", title: "Preventive Medicine", specialty: "Preventive Medicine", category: "Rehabilitation & Therapies", bio: "Lifestyle & public health.", img: "🍎", qualifications: "MD, MPH" }
 ];
 
 const publicationsData = [
@@ -68,22 +118,22 @@ function slugify(str) {
 // -------------------- COMPONENT RENDERERS --------------------
 function renderHome() {
   return `
-    <div class="hero-gradient text-white py-20 px-4 glow-swoosh" style="background: linear-gradient(135deg, #002D62, #0B3C5D);">
-      <div class="container mx-auto text-center md:text-left md:flex justify-between items-center">
+    <div class="hero-overlay glow-swoosh text-white py-20 px-4 relative" style="background: linear-gradient(135deg, #002D62, #0B3C5D);">
+      <div class="container mx-auto text-center md:text-left md:flex justify-between items-center relative z-10">
         <div>
-          <h2 class="text-4xl md:text-6xl font-bold mb-4">World-Class Tertiary & Quaternary Care</h2>
-          <p class="text-xl opacity-90" style="color: #48CAE4;">45+ Specialties | 200+ Expert Physicians | Advanced Research</p>
+          <h2 class="text-4xl md:text-6xl font-bold mb-4 playfair">World-Class Tertiary & Quaternary Care</h2>
+          <p class="text-xl" style="color: #48CAE4; text-shadow: 0 0 4px rgba(0,0,0,0.3);">45+ Specialties | 200+ Expert Physicians | Advanced Research</p>
           <button onclick="navigateTo('book')" class="mt-6 btn-cyan px-6 py-3 rounded-full font-semibold shadow-lg">Schedule Appointment →</button>
         </div>
         <div class="mt-8 md:mt-0 relative">
-          <i class="fas fa-stethoscope text-8xl opacity-50" style="color: #00B4D8;"></i>
+          <i class="fas fa-stethoscope text-8xl opacity-80" style="color: #00B4D8; filter: drop-shadow(0 0 8px rgba(0,180,216,0.8));"></i>
           <div class="star-burst" style="top: -15px; right: -10px;"></div>
           <div class="star-burst" style="bottom: -5px; left: 20px;"></div>
         </div>
       </div>
     </div>
     <div class="container mx-auto px-6 py-12">
-      <h3 class="text-3xl font-bold text-navy mb-8">Centers of Excellence</h3>
+      <h3 class="text-3xl font-bold text-navy mb-8 playfair">Centers of Excellence</h3>
       <div class="grid md:grid-cols-4 gap-6">
         ${Object.keys(specialtiesByCategory).slice(0,4).map(cat => `
           <div class="bg-white p-5 rounded-2xl shadow card-hover" style="border-bottom: 3px solid #00B4D8;">
@@ -101,6 +151,7 @@ function renderHome() {
     </div>
   `;
 }
+
 
 function renderDepartments() {
   return `
